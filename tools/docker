@@ -19,6 +19,11 @@ source ./common/scripts/setup_env.sh
 
 set -eu
 
+# Flipkart Flow
+export GOPROXY="https://jfrog.fkinternal.com/artifactory/api/go/go_virtual"
+export GOPRIVATE="github.fkinternal.com/*"
+git config --global url."https://${token}@github.fkinternal.com/".insteadOf https://github.fkinternal.com/
+
 # Speed up builds when using recent CPUs
 export GGCR_EXPERIMENT_SHA256_SIMD=1
 
