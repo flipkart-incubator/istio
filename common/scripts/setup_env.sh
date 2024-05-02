@@ -31,6 +31,10 @@ REPO_ROOT="$(dirname "$(dirname "${SCRIPT_DIR}")")"
 
 LOCAL_ARCH=$(uname -m)
 
+# Flipkart Flow
+GOPROXY="https://jfrog.fkinternal.com/artifactory/api/go/go_virtual"
+GOPRIVATE="github.fkinternal.com/*"
+
 # Pass environment set target architecture to build system
 if [[ ${TARGET_ARCH} ]]; then
     # Target explicitly set
